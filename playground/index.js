@@ -2,6 +2,7 @@
 let framerate_slider = document.getElementById('framerate-slider');
 let velocity_slider = document.getElementById('velocity-slider');
 let acceleration_slider = document.getElementById('acceleration-slider');
+let border_slider = document.getElementById('border-slider');
 
 
 // Side nav
@@ -21,6 +22,11 @@ function change_velocity(){
 
 function change_acceleration(){
   ACCELERATION_CONSTRAINT = parseFloat(acceleration_slider.value);
+}
+
+
+function change_border(){
+  BORDER_EFFECT = parseInt(border_slider.value);
 }
 
 
