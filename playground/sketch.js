@@ -1,5 +1,11 @@
+let images = [];
+let img;
+let COUNT = 5;
 let WIDTH = window.innerWidth;
 let HEIGHT = window.innerHeight;
+let CHUNK_SIZE = 100;
+let canvas;
+let boids = new Boids(WIDTH, HEIGHT, CHUNK_SIZE);
 
 
 function windowResized() {
@@ -20,9 +26,15 @@ function setup(){
 
     noStroke();
     fill(255);
+
+    for(let i = 0; i < COUNT; i++){
+        boids.create(i)
+    }
 }
 
 
 function draw(){
-    
+    background(33,33,33, 50);
+    boids.update();
+    boids.draw();
 }

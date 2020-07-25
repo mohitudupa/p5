@@ -1,6 +1,8 @@
 <html>
     <head>
         <!--CSS Imports-->
+        <!--link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"-->
+        <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
         <link type="text/css" rel="stylesheet" href="./index.css" media="screen,projection"></link>
 
@@ -11,20 +13,30 @@
     </head>
     <body>
 
-        <div id="side-nav" class="sidenav">
+        <div id="mySidenav" class="sidenav">
             <li>
                 <label for="framerate-slider" class="form-label">Framerate</label>
                 <input type="range" class="form-range" id="framerate-slider" min=20 max=120 step="5" value="60" onchange="change_framerate()">
+            </li>
+            <li>
+                <label for="velocity-slider" class="form-label">Velocity</label>
+                <input type="range" class="form-range" id="velocity-slider" min="1" max="20" step="0.5" value="8" onchange="change_velocity()">
+            </li>
+            <li>
+                <label for="acceleration-slider" class="form-label">Acceleration</label>
+                <input type="range" class="form-range" id="acceleration-slider" min="0" max="10" step="0.5" value="1" onchange="change_acceleration()">
             </li>
         </div>
 
         <div id="canvas" class="canvas"></div>
         
         <!--JS Imports-->
+        <!--script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script-->
         <!--script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script-->
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
         <script src="./index.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+        <script src="./boids.js"></script>
         <script src="./sketch.js"></script>
     </body>
 </html>
